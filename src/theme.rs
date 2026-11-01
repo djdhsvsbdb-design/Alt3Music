@@ -217,16 +217,16 @@ impl RawTheme {
             id: self.id,
             name: self.name,
             colors: ThemeColors {
-                background: c.background.unwrap_or(Rgba::hex(0x21272B)),
-                control_fill: c.control_fill.unwrap_or(Rgba::hex(0x31373B)),
-                module_fill: c.module_fill.unwrap_or(Rgba::hex(0x394046)),
-                menu_fill: c.menu_fill.unwrap_or(Rgba::hex(0x434C51)),
+                background: c.background.unwrap_or(Rgba::hex(0x090F18)),
+                control_fill: c.control_fill.unwrap_or(Rgba::hex(0x121D2B)),
+                module_fill: c.module_fill.unwrap_or(Rgba::hex(0x19283A)),
+                menu_fill: c.menu_fill.unwrap_or(Rgba::hex(0x20364A)),
                 text,
                 // A fixed default, not the theme's background: no built-in theme sets it.
-                text_on_accent: c.text_on_accent.unwrap_or(Rgba::hex(0x21272B)),
+                text_on_accent: c.text_on_accent.unwrap_or(Rgba::hex(0x090F18)),
                 accent: c.accent.unwrap_or(text),
                 white_key: c.white_key.unwrap_or(Rgba::hex(0xC7CEDA)),
-                black_key: c.black_key.unwrap_or(Rgba::hex(0x21272B)),
+                black_key: c.black_key.unwrap_or(Rgba::hex(0x090F18)),
                 white_key_disabled: c.white_key_disabled.unwrap_or(Rgba::hex(0x9FA6B0)),
                 black_key_disabled: c.black_key_disabled.unwrap_or(Rgba::hex(0x717981)),
             },
@@ -480,7 +480,7 @@ mod tests {
         .into();
         assert_eq!(
             hex.join(" "),
-            "090F18 121D2B 19283A 20364A C7CEDA C7CEDA C7CEDA 21272B 9FA6B0 717981"
+            "090F18 121D2B 19283A 20364A C7CEDA C7CEDA C7CEDA 090F18 9FA6B0 717981"
         );
         let o = t.options;
         assert_eq!(
@@ -517,7 +517,7 @@ mod tests {
         let t =
             Theme::from_json(r#"{"id": 9, "name": "x", "colors": {"text": "112233"}}"#).unwrap();
         assert_eq!(t.colors.accent.to_hex(), "112233");
-        assert_eq!(t.colors.background.to_hex(), "21272B");
+        assert_eq!(t.colors.background.to_hex(), "090F18");
     }
 
     #[test]
