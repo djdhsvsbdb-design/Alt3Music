@@ -1290,7 +1290,7 @@ mod tests {
                 .unwrap()
                 .1
         );
-        assert_eq!(Choice::Theme.label(&s), "Classic Gray");
+        assert_eq!(Choice::Theme.label(&s), "Alt3 Neon");
         assert_eq!(Choice::Animation.label(&s), "Full");
         let mut s = Settings::default();
         for c in [Choice::Theme, Choice::Animation] {
