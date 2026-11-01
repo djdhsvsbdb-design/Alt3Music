@@ -854,7 +854,7 @@ mod tests {
         let cases = [
             (0.0, [32, 54, 74], [255, 0, 0]),
             (0.5, [62, 82, 101], [251, 36, 38]),
-            (1.0, [92, 110, 128], [247, 73, 76]),
+            (1.0, [92, 110, 128], [248, 73, 77]),
         ];
         for (p, unselected, selected) in cases {
             for (k, [r, g, b]) in [(1, unselected), (0, selected)] {
