@@ -4,16 +4,6 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths:
-      - "android/**"
-      - "src/**"
-      - "crates/**"
-      - "vendor/**"
-      - "sounds/**"
-      - "tools/android-dist.sh"
-      - "Cargo.toml"
-      - "Cargo.lock"
-      - ".github/workflows/android-apk.yml"
 
 permissions:
   contents: read
