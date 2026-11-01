@@ -1266,7 +1266,7 @@ mod tests {
         assert_eq!(
             labels(Choice::Theme),
             [
-                "Classic Gray",
+                "Alt3 Neon",
                 "Deep Purple",
                 "Slate",
                 "Paper",
