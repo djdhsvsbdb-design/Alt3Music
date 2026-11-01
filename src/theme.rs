@@ -357,7 +357,7 @@ pub fn builtin_themes() -> Vec<Theme> {
     .collect()
 }
 
-/// Theme by ID; an unknown ID gives theme 0 (Classic Gray).
+/// Theme by ID; an unknown ID gives theme 0 (Alt3 Neon).
 pub fn theme_by_id(id: u32) -> Theme {
     let mut themes = builtin_themes();
     let index = themes.iter().position(|t| t.id == id).unwrap_or(0);
@@ -448,7 +448,7 @@ mod tests {
         assert!(themes.iter().enumerate().all(|(i, t)| t.id == i as u32));
         assert_eq!(themes[7].name, "High Contrast A");
         assert_eq!(theme_by_id(9).id, 0);
-        assert_eq!(theme_by_id(u32::MAX).name, "Classic Gray");
+        assert_eq!(theme_by_id(u32::MAX).name, "Alt3 Neon");
         // A theme that sets its own keys and options: Deep Purple.
         let deep = &themes[1];
         assert_eq!(deep.colors.black_key.to_hex(), "000000");
