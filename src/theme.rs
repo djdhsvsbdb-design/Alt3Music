@@ -282,15 +282,15 @@ pub fn builtin_themes() -> Vec<Theme> {
             },
         }
     };
-    const ACCENT: u32 = 0xFB8B3F;
+    const ACCENT: u32 = 0x28D7C5;
     let clay_keys = Some([0xC5CAD7, 0x211D20, 0x9A98A4, 0x807981]);
     let clay_options = Some([0.90, 0.63, 1.00, 0.153]);
 
     [
         row(
             0,
-            "Classic Gray",
-            [0x21272B, 0x31373B, 0x394046, 0x434C51, 0xC7CEDA, ACCENT],
+            "Alt3 Neon",
+            [0x090F18, 0x121D2B, 0x19283A, 0x20364A, 0xE7F2FF, ACCENT],
             None,
             None,
         ),
@@ -427,9 +427,9 @@ mod tests {
     #[test]
     fn classic_gray_resolves_with_defaults() {
         let c = theme_by_id(0).colors;
-        assert_eq!(c.background.to_hex(), "21272B");
-        assert_eq!(c.text.to_hex(), "C7CEDA");
-        assert_eq!(c.accent.to_hex(), "FB8B3F");
+        assert_eq!(c.background.to_hex(), "090F18");
+        assert_eq!(c.text.to_hex(), "E7F2FF");
+        assert_eq!(c.accent.to_hex(), "28D7C5");
         assert_eq!(c.white_key.to_hex(), "C7CEDA");
         assert_eq!(c.black_key_disabled.to_hex(), "717981");
     }
@@ -480,7 +480,7 @@ mod tests {
         .into();
         assert_eq!(
             hex.join(" "),
-            "21272B 31373B 394046 434C51 C7CEDA C7CEDA C7CEDA 21272B 9FA6B0 717981"
+            "090F18 121D2B 19283A 20364A C7CEDA C7CEDA C7CEDA 21272B 9FA6B0 717981"
         );
         let o = t.options;
         assert_eq!(
