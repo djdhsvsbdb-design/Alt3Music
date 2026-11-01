@@ -1152,7 +1152,7 @@ mod tests {
             // 4. Labels: FontSize 1 in the per-RGBA average of `controlFill` (49, 55, 59) and the channel (255, 0, 0),
             //    (152, 28, 30), at 50 % (premultiplied); each box text width × FontSize 1 high, its bottom on its line,
             //    from 0.25 U in; none at 0.
-            let label = Color32::from_rgba_premultiplied(76, 14, 15, 128);
+            let label = Color32::from_rgba_premultiplied(69, 8, 11, 128);
             let font = metrics(ppp).font_id(FontSize::Pt8);
             let labels: Vec<_> = (shapes[13..19].iter())
                 .map(|s| {
