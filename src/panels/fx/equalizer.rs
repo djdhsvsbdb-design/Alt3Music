@@ -852,9 +852,9 @@ mod tests {
         // Band 2 is unselected: lerp(menuFill (67, 76, 81), text (199, 206, 218), 0.3·p). Band 1 is selected:
         // lerp(channel (255, 0, 0), text, 0.3·p).
         let cases = [
-            (0.0, [67, 76, 81], [255, 0, 0]),
-            (0.5, [87, 96, 102], [247, 31, 33]),
-            (1.0, [107, 115, 122], [238, 62, 65]),
+            (0.0, [32, 54, 74], [255, 0, 0]),
+            (0.5, [62, 82, 101], [251, 36, 38]),
+            (1.0, [92, 110, 128], [247, 73, 76]),
         ];
         for (p, unselected, selected) in cases {
             for (k, [r, g, b]) in [(1, unselected), (0, selected)] {
